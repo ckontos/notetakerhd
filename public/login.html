@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NotetakerHD - Login</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css" media="screen" title="no title">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
+</head>
+
+<body>
+    <div class="loginCardDiv">
+        <div class="row">
+            <div class="container col s6 offset-s3 center-align">
+                <div class="card" id="loginCard">
+                    <div class="card-panel white">
+                        <div class="loginTopPanel">
+                            <a href="/home" class="topPanelLink left">NotetakerHD</a>
+                        </div>
+                    </div>
+                    <div class="card-content" id="userLogin">
+                        <div class="row" id="loginCardContent">
+                            <form class="col col s6 offset-s3">
+                                <div class="card-panel white inputCard whiteCardPanelLogin">
+                                    <div class="row topRowOfWhitePanel">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix">email</i>
+                                            <input id="userEmail" type="email" class="validate">
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="row bottomRowOfWhitePanel">
+                                        <div class="input-field col s12">
+                                            <i class="material-icons prefix">lock_outline</i>
+                                            <input id="userPassword" type="password" class="validate">
+                                            <label for="password">Password</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row logInAndForgot">
+                                    <div class="input-field">
+                                        <a href="#" id="loginTheUser" class="btn waves-effect waves-light transparent center-align white-text">Log In</a><br><br>
+                                        <a class="white-text modal-trigger" href="" data-target="forgotPassword">Forgot Password?</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-panel transparent loginBottomPanel">
+                        <div>
+                            <span class="white-text center">
+                                Don't have an Account?</span> <a href="/register"><span class="white-text" style="text-decoration: underline;">Sign Up</span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- jQuery script-->
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+<script src="assets/javascript/login.js"></script>
+
+</html>

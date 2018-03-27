@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NotetakerHD - Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css" media="screen" title="no title">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="notesCardDiv">
+        <div class="row">
+            <div class="col s10 offset-s1">
+                <div class="card" id="notesCard">
+                    <div class="card-panel white">
+                        <div class="notesTopPanel">
+                            <a href="/notes" class="topPanelLink left">NotetakerHD</a>
+                            <!-- Dropdown Trigger -->
+                            <a class='dropdown-trigger btn right topPanelButton blue lighten-3 black-text' href='#' data-target='dropdown1'>Username <i class="material-icons topPanelButtonIcon">expand_more</i></a>
+
+                            <!-- Dropdown Structure -->
+                            <ul id='dropdown1' class='dropdown-content'>
+                                <li><a href="#" class="black-text">Dashboard</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#" class="black-text">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-content" id="innerNotesCard">
+                        <div class="row" id="innerNotesCardContent">
+                            <div class="col s12">
+                                <div class="card-panel white" id="notesGoHere">
+                                <!--==============THE NOTES GO HERE================-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-panel transparent notesBottomPanel">
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+    <script src="assets/javascript/dashboard.js"></script>
+
+</body>
+
+</html>

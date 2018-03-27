@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NotetakerHD - Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css" media="screen" title="no title">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="dashboardCardDiv">
+        <div class="row">
+            <div class="col s10 offset-s1">
+                <div class="card" id="dashboardCard">
+                    <div class="card-panel white">
+                        <div class="dashboardTopPanel">
+                            <a href="/dashboard" class="topPanelLink left">NotetakerHD</a>
+                            <!-- Dropdown Trigger -->
+                            <a class='dropdown-trigger btn right topPanelButton transparent black-text' href='#' data-target='dropdown1'>Username<i class="material-icons topPanelButtonIcon">expand_more</i></a>
+
+                            <!-- Dropdown Structure -->
+                            <ul id='dropdown1' class='dropdown-content'>
+                                <li><a href="#" class="black-text">Dashboard</a></li>
+                                <li class="divider"></li>
+                                <li><a href="/logout" class="black-text">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-content" id="innerDashboardCard">
+                        <div class="row" id="innerDashboardCardContent">
+                            <div class="col s12">
+                                <div class="card-panel white" id="entriesGoHere">
+                                    <div class="row">
+                                        <form class="col s12">
+                                            <div class="row">
+                                                <div class="input-field col s5">
+                                                    <i class="material-icons prefix">input</i>
+                                                    <input id="newEntryTitle" type="text" class="validate">
+                                                    <label for="newEntryTitle">Title</label>
+                                                </div>
+                                                <div class="input-field col s5">
+                                                    <i class="material-icons prefix">input</i>
+                                                    <input id="newEntrySubject" type="text" class="validate">
+                                                    <label for="newEntrySubject">Subject</label>
+                                                </div>
+                                                <div class="input-field col s2">
+                                                    <a class="waves-effect waves-light btn blue lighten-3 black-text" id='addEntryBtn'>Add Entry</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <!--==============THE ENTRIES GO HERE================-->
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <div class="card-panel blue lighten-3 eachEntryPanel">
+                                                <h5 class="black-text entryInfo entryItem">Pharmacology Notes</h5>
+                                                <div class="fixed-action-btn entryButton">
+                                                    <a class="btn-floating btn-large black entryItem">
+                                                            <i class="large material-icons">mode_edit</i>
+                                                        </a>
+                                                    <ul>
+                                                        <li><a class="btn-floating red"><i class="material-icons">delete</i></a></li>
+                                                        <li><a class="btn-floating yellow darken-1"><i class="material-icons">create</i></a></li>
+                                                        <li><a class="btn-floating green"><i class="material-icons">library_books</i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-panel transparent dashboardBottomPanel">
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+    <script src="assets/javascript/dashboard.js"></script>
+
+</body>
+
+</html>
