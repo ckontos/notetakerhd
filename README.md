@@ -15,7 +15,6 @@
         <li>mySQL</li>
         <li>Sequelize</li>
         <li>passport.js</li>
-        
     </ul>
 </p>
 
