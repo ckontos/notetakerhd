@@ -11,6 +11,8 @@ $(document).ready(function() {
     //initialize the modal dropdown
     $('select').formSelect();
 
+    handleUserNameDisplay();
+
     /** Function to add a data listener **/
     var startListening = function() {
         myFirebase.on('child_added', function(snapshot) {
@@ -113,6 +115,13 @@ $(document).ready(function() {
         $.post("/api/notes", note, function() {
             var id = note.EntryId;
             window.location.href = "/notes?entry_id=" + id;
+        });
+    }
+
+    function handleUserNameDisplay() {
+        $.get("/api/user_data", {}, function(data) {
+
+            $('.userNameDisplay').append(data.username);
         });
     }
 

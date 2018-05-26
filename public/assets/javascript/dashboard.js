@@ -8,7 +8,7 @@ $(document).ready(function() {
     //event listeners for submitting new entry and deleting one.
     $('#addEntryBtn').on("click", handleEntrySubmit);
     $(document).on("click", ".delete-entry", handleDeleteEntryPress);
-    handleuserNameDisplay();
+    handleUserNameDisplay();
 
     // Initially, getting all the entrys
     getEntries();
@@ -94,7 +94,7 @@ $(document).ready(function() {
         }
     }
 
-    function handleuserNameDisplay() {
+    function handleUserNameDisplay() {
         $.get("/api/user_data", {}, function(data) {
 
             $('.userNameDisplay').append(data.username);

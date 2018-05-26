@@ -13,6 +13,7 @@ $(document).ready(function() {
     $(document).on("click", ".deleteNote", handleNoteDelete);
     $(document).on("click", ".editNote", handleNoteEdit);
     $(document).on("click", ".chatNote", handleChatForm);
+    handleUserNameDisplay();
 
 
 
@@ -129,4 +130,11 @@ $(document).ready(function() {
         myFirebase.push({ Name: msgName, Text: msgText });
         textInput.val("");
     });
+
+    function handleUserNameDisplay() {
+        $.get("/api/user_data", {}, function(data) {
+
+            $('.userNameDisplay').append(data.username);
+        });
+    }
 });

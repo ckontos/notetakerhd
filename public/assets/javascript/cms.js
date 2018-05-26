@@ -9,6 +9,7 @@ $(document).ready(function() {
 
     // Adding an event listener for when the form is submitted
     $('#addNotesBtn').on("click", handleFormSubmit);
+    handleUserNameDisplay();
 
     // Gets the part of the url that comes after the "?" (which we have if we're updating a post)
     var url = window.location.search;
@@ -137,6 +138,13 @@ $(document).ready(function() {
                 var id = note.EntryId;
                 window.location.href = "/notes?entry_id=" + id;
             });
+    }
+
+    function handleUserNameDisplay() {
+        $.get("/api/user_data", {}, function(data) {
+
+            $('.userNameDisplay').append(data.username);
+        });
     }
 
 
