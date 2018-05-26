@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>NotetakerHD - Dashboard</title>
+    <title>NotetakerHD - Add Notes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
@@ -13,26 +13,23 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <div class="dashboardCardDiv">
+    <div class="notesCardDiv">
         <div class="row">
             <div class="col l10 offset-l1 m12 s12">
-                <div class="card" id="dashboardCard">
+                <div class="card" id="addNoteCard">
                     <div class="card-panel white">
-                        <div class="dashboardTopPanel">
+                        <div class="cmsTopPanel">
                             <a href="/dashboard" class="topPanelLink left">NotetakerHD</a>
                             <!-- Dropdown Trigger -->
                             <a class='dropdown-trigger right topPanelButton black-text' href='#' data-target='dropdown1'><i class="small material-icons topPanelButtonIcon">account_circle</i></a>
 
                             <!-- Dropdown Structure -->
                             <ul id='dropdown1' class='dropdown-content'>
-                                <li class="grey lighten-3">
-                                    <span class="black-text center userNameDisplay"><i class="tiny material-icons prefix">face</i></span>
-                                </li>
-                                <li class="divider"></li>
                                 <li><a href="/dashboard" class="black-text center">Dashboard</a></li>
                                 <li class="divider"></li>
                                 <li><a href="/cms" class="black-text center">Add Notes</a></li>
@@ -43,33 +40,53 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="card-content" id="innerDashboardCard">
-                        <div class="row" id="innerDashboardCardContent">
-                            <div class="col s12">
-                                <div class="card-panel white entry-container">
+                    <div class="card-content" id="innerCmsCard">
+                        <div class="row" id="innerCmsCardContent">
+                            <div class="col l10 offset-l1 m12 s12">
+                                <div class="card-panel white addNotesForm">
                                     <div class="row">
-                                        <form class="col s12">
+                                        <form class="col s12" id="cms">
                                             <div class="row">
-                                                <div class="input-field col l6 offset-l2 m8 offset-m1 s12 grey lighten-3">
-                                                    <i class="material-icons prefix">add_box</i>
-                                                    <input id="newEntryTitle" type="text">
-                                                    <label for="newEntryTitle">Title</label>
+                                                <div class="input-field col l10 offset-l1 m12 s12 grey lighten-3">
+                                                    <i class="material-icons prefix">input</i>
+                                                    <input id="newNoteTitle" type="text" class="validate">
+                                                    <label for="newNoteTitle">Title</label>
                                                 </div>
-                                                <div class="input-field col l2 m2 s12 center">
-                                                    <a class="waves-effect waves-light btn blue lighten-3 black-text" id='addEntryBtn'>Add Entry</a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col l10 offset-l1 m12 s12 grey lighten-3">
+                                                    <i class="material-icons prefix">date_range</i>
+                                                    <input type="text" class="datepicker" id="newNoteDate">
+                                                    <label for="newNoteDate">Date</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col l10 offset-l1 m12 s12 grey lighten-3">
+                                                    <i class="material-icons prefix">add_box</i>
+                                                    <select id="entrySelect">
+                                                      <option value="" disabled selected>Add Note To Entry</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col l10 offset-l1 m12 s12 grey lighten-3">
+                                                    <i class="material-icons prefix">library_books</i>
+                                                    <textarea id="newNoteBody" class="materialize-textarea"></textarea>
+                                                    <label for="newNoteBody">Notes</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-field col l10 offset-l1 m12 s12 center">
+                                                    <a class="waves-effect waves-light btn blue lighten-3 black-text" id='addNotesBtn'>Add Notes</a>
                                                 </div>
                                             </div>
                                         </form>
-                                    </div>
-                                    <div class="divider"></div>
-                                    <div class="entriesGoHere">
-                                        <!-- ENTRIES GO HERE -->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card-panel transparent dashboardBottomPanel">
+                    <div class="card-panel transparent cmsBottomPanel">
                         <div>
 
                         </div>
@@ -82,9 +99,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+    <script src="assets/javascript/cms.js"></script>
     <script src="assets/javascript/initilizations.js"></script>
-    <script src="assets/javascript/dashboard.js"></script>
-
 
 </body>
 

@@ -1,38 +1,38 @@
-<!DOCTYPE html>
+<!Doctype html>
 
 <html lang="en-us">
 
 <head>
     <meta charset="UTF-8">
-    <title>NotetakerHD - Dashboard</title>
+    <title>NotetakerHD-Messages</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/styles.css" media="screen" title="no title">
+    <script src='https://cdn.firebase.com/js/client/2.4.0/firebase.js'></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+
+
 </head>
 
 <body>
 
-    <div class="dashboardCardDiv">
+    <div class="messagesCardDiv">
         <div class="row">
             <div class="col l10 offset-l1 m12 s12">
-                <div class="card" id="dashboardCard">
+                <div class="card" id="messagesCard">
                     <div class="card-panel white">
-                        <div class="dashboardTopPanel">
+                        <div class="messagesTopPanel">
                             <a href="/dashboard" class="topPanelLink left">NotetakerHD</a>
                             <!-- Dropdown Trigger -->
                             <a class='dropdown-trigger right topPanelButton black-text' href='#' data-target='dropdown1'><i class="small material-icons topPanelButtonIcon">account_circle</i></a>
 
                             <!-- Dropdown Structure -->
                             <ul id='dropdown1' class='dropdown-content'>
-                                <li class="grey lighten-3">
-                                    <span class="black-text center userNameDisplay"><i class="tiny material-icons prefix">face</i></span>
-                                </li>
-                                <li class="divider"></li>
                                 <li><a href="/dashboard" class="black-text center">Dashboard</a></li>
                                 <li class="divider"></li>
                                 <li><a href="/cms" class="black-text center">Add Notes</a></li>
@@ -47,23 +47,15 @@
                         <div class="row" id="innerDashboardCardContent">
                             <div class="col s12">
                                 <div class="card-panel white entry-container">
-                                    <div class="row">
-                                        <form class="col s12">
-                                            <div class="row">
-                                                <div class="input-field col l6 offset-l2 m8 offset-m1 s12 grey lighten-3">
-                                                    <i class="material-icons prefix">add_box</i>
-                                                    <input id="newEntryTitle" type="text">
-                                                    <label for="newEntryTitle">Title</label>
-                                                </div>
-                                                <div class="input-field col l2 m2 s12 center">
-                                                    <a class="waves-effect waves-light btn blue lighten-3 black-text" id='addEntryBtn'>Add Entry</a>
-                                                </div>
-                                            </div>
-                                        </form>
+                                    <div class="row center">
+                                        <div class="col s12">
+                                            <h3 class="chatTitle">Message Board</h3>
+                                        </div>
                                     </div>
-                                    <div class="divider"></div>
-                                    <div class="entriesGoHere">
-                                        <!-- ENTRIES GO HERE -->
+                                    <div class="row">
+                                        <div class="col s12" id="chat">
+                                            <!--CHAT CONTENTS FROM FIREBASE GO HERE-->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -79,12 +71,56 @@
         </div>
     </div>
 
+    <!-- Modal Structure for sending note to chat -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="inbox-container center">
+                <h5>Select which entry you would like to add this note to.</h5>
+                <div class="row">
+                    <div class="input-field col l10 offset-l1 m12 s12 grey lighten-3">
+                        <select id="msg-entry-select">
+                            <option value="" disabled selected>Select Entry</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col l10 offset-l1 m12 s12 grey lighten-3">
+                        <input type="text" class="msg-date-picker" id="msg-note-date">
+                        <label for="newNoteDate">Date (MMM DD, YYYY)</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 center">
+                        <a class="waves-effect waves-light btn blue lighten-3 black-text modal-close" id='msg-add-note'>Add Note</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer center">
+    </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBd_3QJuPPCwfb5zsNrXYhreCj4kXLITnQ",
+            authDomain: "notetakerhd-chat.firebaseapp.com",
+            databaseURL: "https://notetakerhd-chat.firebaseio.com",
+            projectId: "notetakerhd-chat",
+            storageBucket: "notetakerhd-chat.appspot.com",
+            messagingSenderId: "623690667666"
+        };
+        firebase.initializeApp(config);
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
     <script src="assets/javascript/initilizations.js"></script>
-    <script src="assets/javascript/dashboard.js"></script>
-
+    <script src="assets/javascript/messages.js"></script>
 
 </body>
 

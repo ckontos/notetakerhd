@@ -54,7 +54,7 @@ module.exports = function(app) {
     // route for getting some data about our user to be used client side
     app.get("/api/user_data", function(req, res) {
         //if user is not logged in, send back empty object
-        if (req.user) {
+        if (!req.user) {
             res.json({});
         }
         //otherwise send back the user info

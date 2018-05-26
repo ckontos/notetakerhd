@@ -20,22 +20,22 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/register.html"));
     });
 
+    app.get("/dashboard", isAuthenticated, function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/dashboard.html"));
+    });
+
+    app.get("/chatroom", isAuthenticated, function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/messages.html"));
+    });
+
     // takes you to the notes for each entry
     app.get("/notes", isAuthenticated, function(req, res) {
         res.sendFile(path.join(__dirname, "../public/notes.html"));
     });
 
-
-    // app.get("/login", function(req, res) {
-    //     // If the user already has an account send them to the search page
-    //     if (req.user) {
-    //         res.redirect("/dashboard");
-    //     }
-    //     res.sendFile(path.join(__dirname, "../public/login.html"));
-    // });
-    app.get("/dashboard", isAuthenticated, function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/dashboard.html"));
+    // takes you to the page for note addition forms for each entry
+    app.get("/cms", isAuthenticated, function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/cms.html"));
     });
-
 
 };

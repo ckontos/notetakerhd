@@ -3,6 +3,11 @@
 #topBackground {
     background: url('../images/dark_wood.png');
     color: white;
+    position: relative;
+}
+
+.s12 {
+    width: 100%;
 }
 
 .tiny {
@@ -48,8 +53,23 @@
     font-size: 22px;
 }
 
+.home-dash-ss {
+    width: 600px;
+    height: 350px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.40), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+#dashPicContainer {
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+}
+
 .textUnderPic {
-    height: 250px;
+    height: 300px;
+    font-family: 'Caveat Brush', cursive;
+    padding-top: 200px;
+    color: #757575;
 }
 
 #howItWorksDiv {
@@ -102,14 +122,18 @@
 #loginCard,
 #registerCard,
 #dashboardCard,
-#notesCard {
+#notesCard,
+#addNoteCard,
+#messagesCard {
     background: url('../images/dark_wood.png');
 }
 
 .loginTopPanel,
 .registerTopPanel,
 .dashboardTopPanel,
-.notesTopPanel {
+.notesTopPanel,
+.cmsTopPanel,
+.messagesTopPanel {
     font-family: 'Bowlby One', cursive;
     font-size: 20px;
     margin-bottom: 20px;
@@ -151,15 +175,33 @@
 #newUserUsername:focus,
 #newUserPassword:focus,
 #newEntryTitle:focus,
-#newEntrySubject:focus {
+#newEntrySubject:focus,
+#newNoteTitle:focus,
+#newNoteDate:focus,
+#newNoteBody:focus,
+.select-wrapper input.select-dropdown:focus {
     border-bottom: 1px solid #90caf9;
     -webkit-box-shadow: 0 1px 0 0 #90caf9;
     -moz-box-shadow: 0 1px 0 0 #90caf9;
     box-shadow: 0 1px 0 0 #90caf9;
 }
 
-.active {
+#feedback-name:focus,
+#feedback-email:focus,
+#feedback-body:focus {
+    border-bottom: 1px solid black;
+    -webkit-box-shadow: 0 1px 0 0 black;
+    -moz-box-shadow: 0 1px 0 0 black;
+    box-shadow: 0 1px 0 0 black;
+}
+
+.prefix.active {
     color: #90caf9!important;
+}
+
+
+.active {
+    color: white!important;
 }
 
 .logInAndForgot {
@@ -197,11 +239,17 @@
 
 /**************************dashboard.html styling***************************/
 
+.userNameDisplay {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
 .topPanelButton {
     line-height: 25px;
-    border-style: solid;
-    border-color: #90caf9;
-    border-width: 2px;
+}
+
+#dropdown1 {
+    width: 200px !important;
+    background: #90caf9;
 }
 
 .topPanelButtonIcon {
@@ -232,4 +280,140 @@
 
 .entryItem {
     display: inline-block;
+}
+
+.datepicker-date-display {
+    background-color: #90caf9 !important;
+    color: black !important;
+}
+
+.year-text {
+    color: black !important;
+}
+
+.datepicker-table td.is-today {
+    color: #42a5f5 !important;
+}
+
+.datepicker-today,
+.datepicker-done {
+    color: #42a5f5 !important;
+}
+
+.datepicker-table td.is-selected {
+    background-color: #90caf9;
+}
+
+.collapsible-header {
+    display: block !important;
+}
+
+.note-title-icon {
+    transform: translateY(30%);
+}
+
+
+.deleteNote {
+    width: 20px;
+    margin-right: 10px;
+    transform: translateY(-10%);
+}
+
+.deleteIcon {
+    transform: translateX(-50%);
+}
+
+.editNote {
+    width: 20px;
+    transform: translateY(-10%);
+}
+
+.chatNote {
+    width: 20px;
+    margin-left: 10px;
+    transform: translateY(-10%);
+}
+
+.chatIcon {
+    transform: translateX(-50%);
+}
+
+.editIcon {
+    transform: translateX(-50%);
+}
+
+.collapsible-body {
+    word-wrap: break-word;
+}
+
+.feedback-div-text {
+    width: 400px;
+}
+
+.collapsible-body {
+    white-space: pre-wrap;
+}
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: black !important;
+}
+
+.addNoteFromChat {
+    margin-left: 10px;
+}
+
+/**************************message.html styling***************************/
+
+.chatTitle {
+    font-family: 'Caveat Brush', cursive;
+}
+
+.addNoteFromChat {
+    height: 28px;
+}
+
+.addNoteFromChatText {
+    font-size: 12px;
+    transform: translateY(-10%);
+}
+
+.nameElement {
+    font-size: 12px;
+}
+
+
+
+
+/*Media Queries*/
+
+@media only screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2) {
+    .eachEntryPanel {
+        height: 150px;
+        text-align: center;
+    }
+
+    .entryInfo {
+        font-size: 20px;
+    }
+
+    .mobileEntryButtons {
+        margin-top: 10px;
+    }
+
+    .centerMobileButton {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .collapsible-header {
+        height: 120px;
+        text-align: center;
+    }
+
+    .note-buttons {
+        transform: translateY(90%);
+        width: 100%;
+        margin: 0 auto;
+    }
 }

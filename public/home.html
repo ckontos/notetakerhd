@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
 </head>
 
 <body>
@@ -18,8 +19,8 @@
             <div class="row headerContent">
                 <div class="col s5 logo">Notetaker<span>HD</span></div>
                 <div class="col s7 right-align">
-                    <a class="btn transparent white-text signUp"><i class="tiny material-icons">account_circle</i>Sign Up</a>
-                    <a class="btn transparent white-text signIn"><i class="tiny material-icons">https</i>Log In</a>
+                    <a href="/register" class="btn transparent white-text signUp"><i class="tiny material-icons">account_circle</i>Sign Up</a>
+                    <a href="/login" class="btn transparent white-text signIn"><i class="tiny material-icons">https</i>Log In</a>
                 </div>
             </div>
         </header>
@@ -31,10 +32,18 @@
         </div>
     </div>
 
+    <div class="row" id="dashPicContainer">
+        <div class='col s12 center'>
+            <img src="assets/images/dashpic.png" class="home-dash-ss">
+        </div>
+    </div>
+
     <!--===================== ROW OF TEXT UNDER PICTURE ============================-->
     <div class="textUnderPic">
         <div class="row">
-
+            <div class="col s12 center">
+                <h4>Create, manage, and share essential notes with others</h4>
+            </div>
         </div>
     </div>
 
@@ -87,15 +96,62 @@
         <div class="row">
             <div class="row">
                 <div class="col s12">
-                    <h4 class="center-align white-text"><b>We love to hear your feedback!</b></h4>
-                    <p class="center-align white-text">Let us know about your experiences with NotetakerHD</p>
+                    <h3 class="center-align white-text"><b>We'd love to hear your feedback!</b></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s4 offset-s4">
+                    <p class="center-align white-text">We strive on simplicity and efficiency. With your feedback we are able to execute on both of these, and give you the best experience possible. Let us know about your experiences with NotetakerHD.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col s12 center-align">
-                    <a href="#" class="waves-effect waves-light btn-large transparent white-text" id="feedbackBtn">Contact Us</a>
+                    <a href="#modal1" class="waves-effect waves-light btn-large transparent white-text modal-trigger" id="feedbackBtn">Contact Us</a>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure for feedback modal -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="feedback-name" type="text" class="validate">
+                            <label for="feedback-name">Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="feedback-email" type="email" class="validate">
+                            <label for="feedback-email">email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="feedback-body" class="materialize-textarea"></textarea>
+                            <label for="feedback-body">Feedback</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 center">
+                            <a class="waves-effect waves-light btn blue lighten-3 black-text" id="send-feedback">Send</a>
+                        </div>
+                    </div>
+
+                    <div class="center messageConfirm">
+                        <!--Your message has been sent dynamically added text-->
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
     </div>
 </body>
@@ -103,5 +159,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+<script src="assets/javascript/initilizations.js"></script>
+<script src="assets/javascript/home.js"></script>
 
 </html>
