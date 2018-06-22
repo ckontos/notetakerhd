@@ -60,10 +60,6 @@
 }
 
 #dashPicContainer {
-    /*position: absolute;
-    */
-    /*width: 100%;*/
-    /*bottom: 5%;*/
     margin-top: -200px;
     z-index: 1;
 }
@@ -421,5 +417,54 @@
 
     .addNoteFromChat {
         margin-left: 0;
+    }
+
+    .headerContent {
+        padding-top: 25px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .homeHeaderRoutes,
+    .logo {
+        text-align: center !important;
+    }
+
+    .logo {
+        font-size: 44px;
+        margin-bottom: 10px;
+    }
+
+    .signIn {
+        margin-left: 0px;
+        width: 300px;
+    }
+
+    .signUp {
+        margin-left: 0px;
+        width: 300px;
+        margin-bottom: 5px;
+    }
+
+    .home-dash-ss {
+        width: 300px;
+        height: 200px;
+    }
+
+    #dashPicContainer {
+        margin-top: -130px;
+        z-index: 1;
+    }
+
+    .textUnderTitle {
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    #getStartedBtn {
+        margin-top: 40px;
     }
 }
