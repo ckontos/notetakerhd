@@ -61,9 +61,6 @@ $(document).ready(function() {
     // Function to either render a list of entries, or if there are none, direct the user to the dashboard
     // to create an entry first
     function renderEntryList(data) {
-        // if (!data.length) {
-        //     window.location.href = "/dashboard";
-        // }
 
         var rowsToAdd = [];
         for (var i = 0; i < data.length; i++) {
@@ -83,14 +80,6 @@ $(document).ready(function() {
         listOption.text(entry.title);
         return listOption;
     }
-
-    //constructing the new note object tonhand to the database
-    // var newNoteFromMsg = {
-    //     title: titleInput.val().trim(),
-    //     date: noteDate.val().trim(),
-    //     body: bodyInput.val().trim(),
-    //     EntryId: entrySelect.val()
-    // };
 
 
     $(document).on("click", ".modal-trigger", (event) => {

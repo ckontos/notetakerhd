@@ -3,7 +3,6 @@
 #topBackground {
     background: url('../images/dark_wood.png');
     color: white;
-    position: relative;
 }
 
 .s12 {
@@ -41,7 +40,8 @@
 
 .sloganDiv {
     padding-top: 100px;
-    padding-bottom: 200px;
+    padding-bottom: 230px;
+    z-index: -1;
 }
 
 .title {
@@ -60,15 +60,17 @@
 }
 
 #dashPicContainer {
-    position: absolute;
-    width: 100%;
-    bottom: 5%;
+    /*position: absolute;
+    */
+    /*width: 100%;*/
+    /*bottom: 5%;*/
+    margin-top: -200px;
+    z-index: 1;
 }
 
 .textUnderPic {
-    height: 300px;
+    height: 200px;
     font-family: 'Caveat Brush', cursive;
-    padding-top: 200px;
     color: #757575;
 }
 
@@ -415,5 +417,9 @@
         transform: translateY(90%);
         width: 100%;
         margin: 0 auto;
+    }
+
+    .addNoteFromChat {
+        margin-left: 0;
     }
 }
