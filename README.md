@@ -18,5 +18,4 @@
     </ul>
 </p>
 
-</p><h5>NotetakerHD is currently under construction and will be debuting in the spring of 2018.  Stay tuned!
-</p></h5>
+Visit the app <a href='https://notetakerhd.herokuapp.com/'>here!</a>
