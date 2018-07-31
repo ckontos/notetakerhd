@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var myFirebase = new Firebase('https://notetakerhd-chat.firebaseio.com/');
+    var myFirebase = new Firebase(firebase_url);
     var nameInput = $('#sender-name');
     var textInput = $('#new-message-body');
     var sendButton = $('#send-message');
@@ -83,18 +83,18 @@ $(document).ready(function() {
 
 
     $(document).on("click", ".modal-trigger", (event) => {
-        console.log("Modal trigger!");
+
         var newMsgObject = {
             title: $(event.currentTarget).parent().attr('data-title'),
             body: $(event.currentTarget).parent().attr('data-body')
         };
-        console.log(newMsgObject);
+
         $(document).on('click', '#msg-add-note', function() {
             //and here is you dynamially created click handler for the modal with available information from chat
-            console.log('I have been clicked');
+
             newMsgObject.date = noteDate.val().trim();
             newMsgObject.EntryId = entrySelect.val();
-            console.log(newMsgObject);
+
             submitNote(newMsgObject);
         });
     });

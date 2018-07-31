@@ -2,10 +2,10 @@ const nodemailer = require('nodemailer');
 
 var Transport = nodemailer.createTransport({
     service: "gmail",
-    host: "ckontoswebpage@gmail.com",
+    host: process.env.EMAIL,
     auth: {
-        user: "ckontoswebpage@gmail.com",
-        pass: "Cdkjob3!"
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PASS
     }
 });
 

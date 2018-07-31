@@ -30,7 +30,7 @@ window.onload = function() {
     }
 
     function submitMessage(message) {
-        console.log("about to send message");
+
         $.get("/send", {
                 to: "ckontos3@gmail.com",
                 subject: "New Message From NoteTakerHD",
@@ -40,7 +40,7 @@ window.onload = function() {
             },
             function(data) {
                 if (data == "sent") {
-                    console.log("Great Success!");
+
                     $('.messageConfirm').html("<p class='green-text'>Message sent!  Thank you for your feedback!<p>");
                     // var confirmDiv = $("<div>");
                     // confirmDiv.addClass('messageConfirm');
