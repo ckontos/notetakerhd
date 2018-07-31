@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var myFirebase = new Firebase(firebase_url);
+    var myFirebase = new Firebase('https://notetakerhd-chat.firebaseio.com/');
     var nameInput = $('#sender-name');
     var textInput = $('#new-message-body');
     var sendButton = $('#send-message');
