@@ -18,4 +18,4 @@
     </ul>
 </p>
 
-Visit the app <a href='https://notetakerhd.herokuapp.com/'>here!</a>
+Visit the app <a target="_blank" href='https://notetakerhd.herokuapp.com/'>here!</a>
